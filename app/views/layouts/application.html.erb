@@ -8,11 +8,21 @@
 </head>
 <body>
 
+
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+<%= link_to "logoff", "/logoff" %>
+<% else %>
+  <%= link_to "signup", "/signup" %>
+<%= link_to "login", "/login" %>
+<% end %>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
 <%= link_to "the story", "/" %>
 <%= link_to "current line", "/next" %>
-<%= link_to "signup", "/signup" %>
-<%= link_to "login", "/login" %>
-<%= link_to "logoff", "/logoff" %>
 
 <%= yield %>
 

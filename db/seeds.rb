@@ -3,7 +3,10 @@ Sentence.delete_all
 Story.delete_all
 Vote.delete_all
 
-u = User.create(email: "coopermayne@gmail.com")
+u = User.create(email: "coopermayne@gmail.com",
+          password: "3232",
+          password_confirmation: "3232"
+         )
 s1 = Sentence.create(text: "my first senetence")
 s2 = Sentence.create(text: "Duis venenatis magna feugiat nisi")
 s3 = Sentence.create(text: "Proin eleifend nisis et nibh")
