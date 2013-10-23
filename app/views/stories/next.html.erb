@@ -2,6 +2,7 @@
 
 <ul>
   <% @nextline_options.each do |sen| %>
+    
     <li>Votes: <%= sen.votes.inject(0) {|sum, vote| vote.vote==true ? sum + 1 : sum - 1} %> - <%= sen.text %> (author: <%= sen.user.email %> @ <%= sen.created_at.to_s %>)</li>
 
     <%= form_tag "sentences/#{sen.id}/votes" do %>

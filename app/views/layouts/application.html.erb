@@ -10,18 +10,17 @@
 
 
 <% if current_user %>
-  Logged in as <%= current_user.email %>.
-<%= link_to "logoff", "/logoff" %>
+  Logged in as <%= current_user.email %>
+  <%= link_to "logoff", "/logoff" %>
+  <%= link_to( "log in with twitter", "/auth/twitter" ) unless current_user.logged_in? "twitter" %>
 <% else %>
   <%= link_to "signup", "/signup" %>
-<%= link_to "login", "/login" %>
+  <%= link_to "login", "/login" %>
 <% end %>
 
 <% flash.each do |name, msg| %>
   <b><%= content_tag :div, msg, :id => "flash_#{name}" %>
 </b><% end %>
-
-<%= link_to "twitter", "/auth/twitter" %>
 
 <%= link_to "the story", "/" %>
 <%= link_to "current line", "/next" %>
