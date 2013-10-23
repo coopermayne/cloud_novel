@@ -6,6 +6,11 @@ class VotesController < ApplicationController
     v.user = current_user
     v.sentence = Sentence.find(params[:sentence_id])
     v.save
-    redirect_to "/next"
+    if Sentence.find(params[:sentence_id]).votes.count > 3
+      redirect_to '/stories/create'
+    else
+      redirect_to "/next"
+    end
   end
+
 end

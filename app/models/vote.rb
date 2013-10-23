@@ -14,4 +14,8 @@ class Vote < ActiveRecord::Base
   belongs_to :user
   belongs_to :sentence
   attr_accessible :vote
+
+  #after vote is saved... check if there is sentence with over 2 votes -- if so .. make a new Story instance...
+  #after_save User.create
+
 end

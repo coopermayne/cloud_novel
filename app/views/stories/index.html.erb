@@ -1,4 +1,4 @@
 <h1>The Story</h1>
-<%= @story.sentences.map{|sen| sen.text}.join(". ") << "." %>
+<%= @story.join(". ") << "." %>
 
 <%= link_to "next sentence", "/next" %>

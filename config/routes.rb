@@ -13,6 +13,8 @@ TestyApp::Application.routes.draw do
   
   root to: "stories#index" #show the story
   get "/next" => "stories#next" #show the active voting page for last line in the story
+  get "/stories/create" => "stories#create"
+
   get "lines/:story_id/sentences" => "sentences#index" #all the options for a given line in the book (no form)
   get "lines/:story_id/sentences/new" => "sentences#new"
   delete "lines/:story_id/sentences/:id" =>  "sentences#destroy"

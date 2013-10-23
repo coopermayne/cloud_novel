@@ -5,13 +5,24 @@ class SentencesController < ApplicationController
   end
 
   def create
+    binding.pry
+    unless current_user
+      flash[:notice] = "you can't post a sentence without logging in!"
+      redirect_to "/next"
+      return
+    end
+
     s = Sentence.new
-    s.text = params[:sentence][:text]
+    sentence = params[:sentence][:text]
+    unless sentence[-1] == "."
+      sentence += "."
+    end
+    s.text = sentence
     @story = Story.find(params[:story_id])
     s.story = @story
     s.user = current_user
     s.save
-    redirect_to "/" 
+    redirect_to "/next" 
   end
 
   def destroy
