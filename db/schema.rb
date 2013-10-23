@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131022192059) do
+ActiveRecord::Schema.define(:version => 20131023021201) do
 
   create_table "sentences", :force => true do |t|
     t.text     "text"
@@ -28,8 +28,10 @@ ActiveRecord::Schema.define(:version => 20131022192059) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "password_hash"
+    t.string   "password_salt"
   end
 
   create_table "votes", :force => true do |t|

@@ -1,5 +1,7 @@
 TestyApp::Application.routes.draw do
 
+  get "sessions/new"
+
   root to: "stories#index" #show the story
 
   get "/next" => "stories#next" #show the active voting page for last line in the story
