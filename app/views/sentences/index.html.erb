@@ -1,0 +1,5 @@
+<h1>The Next sentence!</h1>
+
+<% @sentences.each do |sen| %>
+  <li><%= sen %> (author: <%= sen.user.email %> @ <%= sen.created_at.to_s %>)</li>
+<% end %>

@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TestyApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>FirstProject</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<%= link_to "the story", "/" %>
+<%= link_to "current line", "/next" %>
+<%= link_to "signup", "/signup" %>
+<%= link_to "login", "/login" %>
+<%= link_to "logoff", "/logoff" %>
 
 <%= yield %>
 

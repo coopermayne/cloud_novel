@@ -1,0 +1,9 @@
+<h1>your turn</h1>
+
+<%= form_for(@sentence, url: "/lines/#{@sentence.story.id}/sentences" ) do |f|%>
+
+  your sentence:
+  <%= f.text_field :text %>
+  <%= f.submit "submit" %>
+
+<% end %>
