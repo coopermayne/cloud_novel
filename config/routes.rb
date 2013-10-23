@@ -1,14 +1,18 @@
 TestyApp::Application.routes.draw do
 
-  root to: "stories#index" #show the story
+  match '/auth/:provider/callback' => 'authentications#create'
+  get '/authentications' => 'authentications#index'
+  get "/authentications/:id/delete" => 'authentications#destroy'
 
-  get "/next" => "stories#next" #show the active voting page for last line in the story
   get "/login" => "sessions#new"
   get "/logoff" => "sessions#destroy"
   get "/signup" => "users#new", :as => "signup"
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
+  get "/auth/:provider/callback" => "sessions#create_outside"
   
+  root to: "stories#index" #show the story
+  get "/next" => "stories#next" #show the active voting page for last line in the story
   get "lines/:story_id/sentences" => "sentences#index" #all the options for a given line in the book (no form)
   get "lines/:story_id/sentences/new" => "sentences#new"
   delete "lines/:story_id/sentences/:id" =>  "sentences#destroy"

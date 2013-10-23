@@ -2,6 +2,11 @@ class SessionsController < ApplicationController
   def new
   end
 
+  def create_outside
+    s = request.env["omniauth.auth"]
+    binding.pry
+  end
+
   def create
     user = User.authenticate(params[:email], params[:password])
     if user

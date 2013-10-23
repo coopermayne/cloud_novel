@@ -11,6 +11,7 @@
 class User < ActiveRecord::Base
   has_many :votes
   has_many :sentences
+  has_many :authentications
   attr_accessible :email, :password, :password_confirmation
 
   attr_accessor :password

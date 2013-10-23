@@ -25,6 +25,9 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
+# omniauth
+gem 'omniauth-twitter'
+#
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
