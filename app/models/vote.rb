@@ -15,7 +15,7 @@ class Vote < ActiveRecord::Base
   belongs_to :sentence
   attr_accessible :vote
 
-  #after vote is saved... check if there is sentence with over 2 votes -- if so .. make a new Story instance...
-  #after_save User.create
+  validates_presence_of :user_id, :vote, :sentence_id
+  # don't allow for save user to vote twice on same sentence
 
 end
