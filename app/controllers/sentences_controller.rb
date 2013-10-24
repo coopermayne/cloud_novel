@@ -14,9 +14,6 @@ class SentencesController < ApplicationController
 
     s = Sentence.new
     sentence = params[:sentence][:text]
-    unless sentence[-1] == "."
-      sentence += "."
-    end
     s.text = sentence
     @story = Story.find(params[:story_id])
     s.story = @story

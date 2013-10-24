@@ -1,7 +1,8 @@
 class StoriesController < ApplicationController
+
   def index
     #show the whole story (except last line)
-    @story = Story.all[0...-1].map{|line| line.sentences.sort_by{|sentence| sentence.votes.inject(0) {|sum, vote| vote.vote==true ? sum + 1 : sum - 1}}.reverse.first.text }
+    @story = Story.all[0...-1].map{|line| line.sentences.sort_by{|sentence| sentence.votes.inject(0) {|sum, vote| vote.vote==true ? sum + 1 : sum - 1}}.reverse.first }
   end
 
   def next

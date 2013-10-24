@@ -7,11 +7,11 @@ u = User.create(email: "coopermayne@gmail.com",
           password: "3232",
           password_confirmation: "3232"
          )
-s1 = Sentence.create(text: "Many years later, as he faced the firing squad, Colonel Aureliano Buendia was to remember that distant afternoon when his father took him to discover ice")
-s2 = Sentence.create(text: "Duis venenatis magna feugiat nisi")
-s3 = Sentence.create(text: "Once upon a time and a very good time it was there was a moocow coming down along the road and this moocow that was coming down along the raod met a nicens little boy named baby tuckoo")
-s4 = Sentence.create(text: "This is one potential next line but its kind of stupid")
-s5 = Sentence.create(text: "This is another potential line; its actually quite clever")
+s1 = Sentence.create(text: "Many years later, as he faced the firing squad, Colonel Aureliano Buendia was to remember that distant afternoon when his father took him to discover ice.")
+s2 = Sentence.create(text: "Duis venenatis magna feugiat nisi.")
+s3 = Sentence.create(text: "*Once upon a time and a very good time it was there was a moocow coming down along the road and this moocow that was coming down along the raod met a nicens little boy named baby tuckoo.")
+s4 = Sentence.create(text: "This is one potential next line but its kind of stupid.")
+s5 = Sentence.create(text: "This is another potential line; its actually quite clever.")
 st_line1 = Story.create
 st_line2 = Story.create
 st_line3 = Story.create
