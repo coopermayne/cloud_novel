@@ -12,6 +12,7 @@
   <%= link_to "line", "/next" %>
   <span id='log'>
   <% if current_user %>
+    <%= current_user_name %>
     <%= link_to "logoff", "/logoff" %>
   <% else %>
     <%= link_to "login", "/login" %>
