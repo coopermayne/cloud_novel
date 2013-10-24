@@ -5,7 +5,7 @@ development:
   pool: 5
   host: localhost
   username:  <%= ENV['PG_USERNAME'] %>
-  password: <%= ENV['PG_PASSWORD'] %>
+  password: 
 
 test:
   adapter: postgresql
@@ -14,7 +14,7 @@ test:
   pool: 5
   host: localhost
   username: <%= ENV['PG_USERNAME'] %>
-  password: <%= ENV['PG_PASSWORD'] %>
+  password: 
 
 production:
   adapter: postgresql
@@ -22,4 +22,4 @@ production:
   database: <%= File.basename(Rails.root) %>_production
   pool: 5
   username: <%= ENV['PG_USERNAME'] %>
-  password: <%= ENV['PG_PASSWORD'] %>
+  password: 

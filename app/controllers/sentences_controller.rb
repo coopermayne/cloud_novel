@@ -1,11 +1,11 @@
 class SentencesController < ApplicationController
+
   def index
     id = Story.all.first.sentences.last.id + 1
     @sentences = Sentence.where(id: id)
   end
 
   def create
-    binding.pry
     unless current_user
       flash[:notice] = "you can't post a sentence without logging in!"
       redirect_to "/next"

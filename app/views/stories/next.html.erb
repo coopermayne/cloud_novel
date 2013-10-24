@@ -1,22 +1,45 @@
-<h1> next lines! </h1>
+<header>
+<h1> The Next Sentence </h1>
+</header>
 
-<ul>
-  <% @nextline_options.each do |sen| %>
-    
-    <li>Votes: <%= sen.votes.inject(0) {|sum, vote| vote.vote==true ? sum + 1 : sum - 1} %> - <%= sen.text %> (author: <%= sen.user.email %> @ <%= sen.created_at.to_s %>)</li>
 
-    <%= form_tag "sentences/#{sen.id}/votes" do %>
-      <%= hidden_field_tag :vote, true %>
-      <%= submit_tag "vote up" %>
-    <% end %>
-    <%= form_tag "sentences/#{sen.id}/votes" do %>
-      <%= hidden_field_tag :vote, false %>
-      <%= submit_tag "vote down" %>
-    <% end %>
-
-  <br \><br \>
+  <% if @nextline_options.empty? %>
+    <div class="no_lines">
+    no sentences yet - be the first!
+  </div>
+  <% end %>
   
+  <% @nextline_options.each do |sen| %>
+
+    <div class="possible_line">
+    <div class="vote_control">
+      <div class="vote_up">
+        <%= form_tag "sentences/#{sen.id}/votes" do %>
+          <%= hidden_field_tag :vote, true %>
+        <%= submit_tag "" %>
+      <% end %>
+      </div>
+      <div class="vote_count">
+        <%= sen.votes.inject(0) {|sum, vote| vote.vote==true ? sum + 1 : sum - 1} %>        </div>
+
+      <div class="vote_down">
+        <%= form_tag "sentences/#{sen.id}/votes" do %>
+          <%= hidden_field_tag :vote, false %>
+        <%= submit_tag "" %>
+      </div>
+    </div>
+    <div class="content">
+    <div class="text">
+      <%= sen.text %> 
+    </div>
+    <div class="author_info">
+      (author: <%= sen.user.email %> @ <%= sen.created_at.to_s %>)
+    </div>
+    </div>
+
+  <% end %>
+
+  </div>
 <% end %>
-</ul>
 
 <%= link_to "add your own option", "/lines/#{@story_id}/sentences/new"  %>
