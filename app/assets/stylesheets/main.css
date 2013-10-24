@@ -1,0 +1,131 @@
+.container {
+  width:  70%;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed;
+  width: 13%;
+}
+nav a {
+  display: block;
+  width: 50px;
+  margin: 0 auto 7px auto;
+}
+a {
+  color: #FFE0E0;
+  background: #222222;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 3px 8px 2px 8px;
+  text-align: center;
+}
+
+.login form {
+  position: relative;
+  top: -20px;
+}
+
+.login input[type=submit] {
+  position:relative;
+  left: 5px;
+  bottom: 12px;
+  border:none;
+  font-size: 1em;
+  color: #FFE0E0;
+  background: #222222;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 3px 8px 2px 8px;
+  text-align: center;
+}
+
+#log {
+}
+
+#flash_notice {
+  color: white;
+  font-weight: bold;
+  background-color: rgba(255,0,0,1);
+  border: 5px solid #222222;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+}
+
+header {
+  margin: 25px 0 0 0;
+}
+
+#subtitle {
+  margin-top: -25px;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.no_lines {
+  width: 80%;
+  border: 3px solid #222222;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.possible_line {
+  min-height: 90px;
+  width: 80%;
+  border: 3px solid #222222;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.vote_control {
+  float:left;
+  height: 100px; 
+  width: 40px; 
+  display:inline-block;
+}
+
+.vote_up {
+  height:37px;
+}
+.vote_down {
+  height:37px;
+}
+.vote_count {
+  height:20px;
+  font-weight: bold;
+  text-align: center;
+  position:relative;
+  bottom: 10px;
+}
+.content {
+  display: block;
+}
+
+.vote_up form {
+  background-image: url("http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/48/Hands-Thumbs-up-icon.png") ;
+  background-repeat:no-repeat;
+  background-position: 5px 0px;
+  background-size: 25px 25px;
+  border: none;
+}
+
+.possible_line input[type=submit] {
+  border: none;
+  background: none;
+  height: 40px;
+  width: 100%;
+}
+
+.vote_down form {
+  background-image: url("http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/48/Hands-Thumbs-down-icon.png") ;
+  background-repeat:no-repeat;
+  background-position: 5px 0px;
+  background-size: 25px 25px;
+  border: none;
+}
+

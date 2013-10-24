@@ -1,14 +1,12 @@
 <h1>Log in</h1>
 
+<div class="login">
 <%= form_tag sessions_path do %>
-  <p>
-<%= label_tag :email %><br />
-<%= text_field_tag :email, params[:email] %>
-</p>
-<p>
-<%= label_tag :password %><br />
+  <%= text_field_tag :email, params[:email], :placeholder => "email address" %>
+<br>
 <%= password_field_tag :password %>
-</p>
-<p class="button"><%= submit_tag "Log in" %></p>
+<%= submit_tag "GO" %>
 <% end %>
-
+</div>
+<h2 id="heading">- OR -</h2>
+<%= link_to "sign up", "/signup"  %>

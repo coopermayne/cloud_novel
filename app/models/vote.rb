@@ -15,7 +15,7 @@ class Vote < ActiveRecord::Base
   belongs_to :sentence
   attr_accessible :vote
 
-  validates_presence_of :user_id, :vote, :sentence_id
+  #validates_presence_of :user_id, :vote, :sentence_id
   # don't allow for save user to vote twice on same sentence
 
 end
