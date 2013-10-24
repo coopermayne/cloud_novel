@@ -33,7 +33,7 @@
       <%= sen.text %> 
     </div>
     <div class="author_info">
-      (author: <%= sen.user.email || sen.user.authentications.first.username %> @ <%= sen.created_at.to_s %>)
+      (created by <b><%= sen.user.name || sen.user.authentications.first.username %></b> <%= distance_of_time_in_words(sen.created_at, Time.now) %> ago)
     </div>
     </div>
 

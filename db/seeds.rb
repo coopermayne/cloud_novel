@@ -2,11 +2,14 @@ User.delete_all
 Sentence.delete_all
 Story.delete_all
 Vote.delete_all
+Authentication.delete_all
 
-u = User.create(email: "coopermayne@gmail.com",
+u = RegularUser.create(email: "coopermayne@gmail.com",
+          name: "Cooper Mayne",
           password: "3232",
           password_confirmation: "3232"
          )
+
 s1 = Sentence.create(text: "Many years later, as he faced the firing squad, Colonel Aureliano Buendia was to remember that distant afternoon when his father took him to discover ice.")
 s2 = Sentence.create(text: "Duis venenatis magna feugiat nisi.")
 s3 = Sentence.create(text: "*Once upon a time and a very good time it was there was a moocow coming down along the road and this moocow that was coming down along the raod met a nicens little boy named baby tuckoo.")
