@@ -1,12 +1,12 @@
 <header>
-  <h1>The Story</h1>
+  <h1>The World's Story</h1>
 </header>
 <h3 id="subtitle">by: 
   <span id="author_list">
-    <%= @story.map{|line| line.user.name || line.user.authentications.first.username }.uniq.join(", ") %>
+    <%= @author_list.to_sentence %>
   </span>
 </h3>
 
-<p><%= @story.map{|line| line.text}.join.gsub("*", "</p><p>").html_safe %></p>
+<p><%= @story.map{|line| line.text}.join(" ").gsub("*", "</p><p>").html_safe %></p>
 
 <%= link_to "next sentence", "/next" %>
