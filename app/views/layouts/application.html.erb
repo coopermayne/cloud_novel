@@ -7,17 +7,21 @@
 </head>
 <body>
 
+<% if current_user %>
+  <b><p class="username">
+  logged in:&nbsp;<%= current_user_name.downcase %>
+</p></b>
+<% end %>
+
+
 <nav>
   <%= link_to "home", "/" %>
   <%= link_to "line", "/next" %>
-  <span id='log'>
   <% if current_user %>
-    <%= current_user_name %>
     <%= link_to "logoff", "/logoff" %>
   <% else %>
     <%= link_to "login", "/login" %>
   <% end %>
-  </span>
 
 </nav>
 
@@ -28,7 +32,9 @@
   <% end %>
 
 <%= yield %>
+<p>
 
+</p>
 </div>
 </body>
 </html>

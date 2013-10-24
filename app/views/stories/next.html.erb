@@ -33,7 +33,7 @@
       <%= sen.text %> 
     </div>
     <div class="author_info">
-      (author: <%= sen.user.email %> @ <%= sen.created_at.to_s %>)
+      (author: <%= sen.user.email || sen.user.authentications.first.username %> @ <%= sen.created_at.to_s %>)
     </div>
     </div>
 

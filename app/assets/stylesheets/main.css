@@ -27,6 +27,12 @@ a {
   top: -20px;
 }
 
+.username {
+  position: fixed;
+  right: 30px;
+  top: 7px;
+}
+
 .login input[type=submit] {
   position:relative;
   left: 5px;

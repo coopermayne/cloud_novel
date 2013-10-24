@@ -3,7 +3,7 @@
 </header>
 <h3 id="subtitle">by: 
   <span id="author_list">
-    <%= @story.map{|line| line.user.email }.uniq.join(", ") %>
+    <%= @story.map{|line| line.user.email || line.user.authentications.first.username }.uniq.join(", ") %>
   </span>
 </h3>
 
