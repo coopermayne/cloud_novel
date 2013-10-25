@@ -1,11 +1,12 @@
+<header>
 <h1>your turn</h1>
+</header>
 
-<h3 id="subtitle">note: start your sentence with a * if you want to make it a new paragraph</h3>
+<h6 class="helvetica">note: start your sentence with a * if you want to make it a new paragraph</h6>
 
 <%= form_for(@sentence, url: "/lines/#{@sentence.story.id}/sentences" ) do |f|%>
 
-  your sentence:
-  <%= f.text_field :text %>
+  <%= f.text_area :text, rows:20, cols:60, :placeholder => "enter your sentence here", :class => "text_box" %>
   <%= f.submit "submit" %>
 
 <% end %>

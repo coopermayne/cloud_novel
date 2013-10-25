@@ -22,6 +22,10 @@ h1, h2 {
   font-family: 'helvetica';
 }
 
+.text_box {
+  height: 70px
+}
+
 #go_button {
   display:none;
 }
