@@ -18,7 +18,11 @@ class SentencesController < ApplicationController
     @story = Story.find(params[:story_id])
     s.story = @story
     s.user = current_user
-    s.save
+    if s.save
+      flash[:notice] = "Sentence added!"
+    else
+      flash[:notice] = "Error!"
+    end
     redirect_to "/next" 
   end
 

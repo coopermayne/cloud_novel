@@ -6,7 +6,7 @@
 
 <%= form_for(@sentence, url: "/lines/#{@sentence.story.id}/sentences" ) do |f|%>
 
-  <%= f.text_area :text, rows:20, cols:60, :placeholder => "enter your sentence here", :class => "text_box" %>
-  <%= f.submit "submit" %>
+  <%= f.text_field :text, :placeholder => "enter your sentence and press enter", :class => "text_box" %>
+  <%= f.submit "submit", :id => "go_button" %>
 
 <% end %>

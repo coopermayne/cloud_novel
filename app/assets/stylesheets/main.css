@@ -23,7 +23,7 @@ h1, h2 {
 }
 
 .text_box {
-  height: 70px
+  width: 600px;
 }
 
 #go_button {
