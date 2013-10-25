@@ -34,10 +34,10 @@ class SentencesController < ApplicationController
     @story = Story.find(params[:story_id])
     @sentence.story = @story
 
-    @context = Story.all[0...-1].map{|line| line.sentences.sort_by{|sentence| sentence.votes.inject(0) {|sum, vote| vote.vote==true ? sum + 1 : sum - 1}}.reverse.first }
-    @context = @context[-3..-1] || @context[-2..-1] || @context = @context[-1] 
-    @context = @context.map{|line| line.text}.join(" ").gsub("*", "</p><p>").html_safe 
-    @context = @context[-200..-1] || @context
-    @context = "..." + @context
+    #@context = Story.all[0...-1].map{|line| line.sentences.sort_by{|sentence| sentence.votes.inject(0) {|sum, vote| vote.vote==true ? sum + 1 : sum - 1}}.reverse.first }
+    #@context = @context[-3..-1] || @context[-2..-1] || @context = @context[-1] 
+    #@context = @context.map{|line| line.text}.join(" ").gsub("*", "</p><p>").html_safe 
+    #@context = @context[-200..-1] || @context
+    #@context = "..." + @context
   end
 end
