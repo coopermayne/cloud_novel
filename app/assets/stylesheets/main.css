@@ -1,51 +1,56 @@
 .container {
-  width:  70%;
+  width:  720px;
   margin: 0 auto;
 }
 
 nav {
-  position: fixed;
-  width: 13%;
+  position: relative;
+  border-bottom: 3px solid #222222;
+  border-radius: 3px;
+  padding: 0 4px 0 4px;
 }
 nav a {
-  display: block;
+  position: inline;
   width: 50px;
   margin: 0 auto 7px auto;
 }
-a {
-  color: #FFE0E0;
-  background: #222222;
+h1, h2 {
+  font-family: 'helvetica';
+}
+#go_button {
+  display:none;
+}
+a  {
+  font-family: 'helvetica';
+  border:none;
+  color: #222222;
   font-weight: bold;
   text-decoration: none;
   border-radius: 3px;
   padding: 3px 8px 2px 8px;
   text-align: center;
+}
+
+#twitter {
+  margin-left: 38px;
+  padding-top: 10px;
+}
+
+.right {
+  float:right;
 }
 
 .login form {
+  display:inline-block;
   position: relative;
-  top: -20px;
+  border-bottom: 3px solid black;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .username {
-  position: fixed;
-  right: 30px;
-  top: 7px;
-}
-
-.login input[type=submit] {
-  position:relative;
-  left: 5px;
-  bottom: 12px;
-  border:none;
-  font-size: 1em;
-  color: #FFE0E0;
-  background: #222222;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 3px;
-  padding: 3px 8px 2px 8px;
-  text-align: center;
+  display: inline;
+  position: relative;
 }
 
 #log {
@@ -54,11 +59,15 @@ a {
 #flash_notice {
   color: white;
   font-weight: bold;
-  background-color: rgba(255,0,0,1);
-  border: 5px solid #222222;
-  border-radius: 5px;
+  background-color: rgb(255, 0, 0);
+  border: 2px solid rgb(34, 34, 34);
+  border-radius: 3px 5px 5px 5px;
   display: inline-block;
-  padding: 10px;
+  padding: 0 5px;
+  text-align: center;
+  position: absolute;
+  margin-left: 125px;
+  margin-top: -3px;
 }
 
 header {
@@ -135,3 +144,8 @@ header {
   border: none;
 }
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}

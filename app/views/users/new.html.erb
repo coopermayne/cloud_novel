@@ -1,4 +1,6 @@
-<h1>Sign Up</h1>
+<header>
+<h2>Sign Up</h2>
+</header>
 
 <%= form_for @user, url: "/users" do |f| %>
   <% if @user.errors.any? %>
@@ -11,22 +13,13 @@
   </ul>
 </div>
   <% end %>
-<p>
-<%= f.label :email %><br />
-<%= f.text_field :email %>
-</p>
-<p>
-<%= f.label :name %><br />
-<%= f.text_field :name %>
-</p>
-<p>
-<%= f.label :password %><br />
-<%= f.password_field :password %>
-</p>
-<p>
-<%= f.label :password_confirmation %><br />
-<%= f.password_field :password_confirmation %>
-</p>
-<p class="button"><%= f.submit %></p>
+<%= f.text_field :email, :placeholder => "email"  %>
+<br>
+<%= f.text_field :name, :placeholder => "full name" %>
+<br>
+<%= f.password_field :password, :placeholder => "password" %>
+<br>
+<%= f.password_field :password_confirmation, :placeholder => "password" %>
+<br>
+<%= f.submit "Submit", :id => "go_button"%>
 <% end %>
-

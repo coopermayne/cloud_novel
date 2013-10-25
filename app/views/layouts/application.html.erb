@@ -4,32 +4,36 @@
   <title>FirstProject</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css", :media => 'all' %>
 </head>
 <body>
 
+<div class="container">
+
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+
+<nav>
+  <%= link_to "home", "/" %>
+  <%= link_to "next", "/next" %>
+
+  <span class="right">
 <% if current_user %>
   <b><p class="username">
   logged in:&nbsp;<%= current_user_name.downcase %>
 </p></b>
 <% end %>
 
-
-<nav>
-  <%= link_to "home", "/" %>
-  <%= link_to "line", "/next" %>
   <% if current_user %>
     <%= link_to "logoff", "/logoff" %>
   <% else %>
+    <%= link_to "signup", "/signup"  %>
     <%= link_to "login", "/login" %>
   <% end %>
-
+</span>
 </nav>
-
-<div class="container">
   
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" %>
-  <% end %>
 
 <%= yield %>
 <p>

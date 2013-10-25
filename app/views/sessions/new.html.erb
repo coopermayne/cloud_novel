@@ -1,14 +1,14 @@
-<h1>Log in</h1>
+<header>
+<h2>Log in</h2>
+</header>
 
 <div class="login">
 <%= form_tag sessions_path do %>
   <%= text_field_tag :email, params[:email], :placeholder => "email address" %>
-<br>
-<%= password_field_tag :password %>
-<%= submit_tag "GO" %>
+  <br>
+  <%= password_field_tag :password, nil, :placeholder => "password" %>
+  <br>
+<%= submit_tag "go", :id=>"go_button" %>
 <% end %>
 </div>
-<h2 id="heading">- OR -</h2>
-<%= link_to "sign up", "/signup"  %>
-<h2 id="heading">- OR -</h2>
-<%= link_to "sign in with twitter", '/auth/twitter' %>
+<%= link_to '<img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_black_48_0.png">'.html_safe, '/auth/twitter', :id=>"twitter" %>
