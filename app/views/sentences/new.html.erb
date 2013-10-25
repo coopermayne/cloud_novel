@@ -1,8 +1,8 @@
 <header>
 <h1>your turn</h1>
 </header>
-
-<h6 class="helvetica">note: start your sentence with a * if you want to make it a new paragraph</h6>
+<h6 class="helvetica"><b>Context:</b></h6> 
+<p> <%= @context %></p>
 
 <%= form_for(@sentence, url: "/lines/#{@sentence.story.id}/sentences" ) do |f|%>
 
@@ -10,3 +10,5 @@
   <%= f.submit "submit", :id => "go_button" %>
 
 <% end %>
+
+<h6 class="note helvetica">note: start your sentence with a * if you want to make it a new paragraph</h6>
