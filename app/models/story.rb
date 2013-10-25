@@ -10,5 +10,5 @@
 class Story < ActiveRecord::Base
   #each row represents a line in the story
   #the last row is the one being voted on...
-  has_many :sentences
+  has_many :sentences, dependent: :destroy
 end

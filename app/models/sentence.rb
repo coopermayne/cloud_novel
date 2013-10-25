@@ -13,7 +13,7 @@
 class Sentence < ActiveRecord::Base
   belongs_to :user
   belongs_to :story
-  has_many :votes
+  has_many :votes, dependent: :destroy
 
   attr_accessible :text
 end
