@@ -2,6 +2,7 @@
 <h1>your turn</h1>
 </header>
 <h6 class="helvetica"><b>Context:</b></h6> 
+<p> <%= @context %></p>
 
 <%= form_for(@sentence, url: "/lines/#{@sentence.story.id}/sentences" ) do |f|%>
 
