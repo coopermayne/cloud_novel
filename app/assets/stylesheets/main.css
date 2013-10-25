@@ -17,6 +17,11 @@ nav a {
 h1, h2 {
   font-family: 'helvetica';
 }
+
+.helvetica {
+  font-family: 'helvetica';
+}
+
 #go_button {
   display:none;
 }
@@ -51,23 +56,23 @@ a  {
 .username {
   display: inline;
   position: relative;
+  border-right: 3px dotted black;
 }
 
 #log {
 }
 
 #flash_notice {
-  color: white;
+  color: red;
   font-weight: bold;
-  background-color: rgb(255, 0, 0);
-  border: 2px solid rgb(34, 34, 34);
-  border-radius: 3px 5px 5px 5px;
+  /*background-color: rgb(255, 0, 0);*/
+  /*border: 2px solid rgb(34, 34, 34);*/
+  /*border-radius: 3px 5px 5px 5px;*/
   display: inline-block;
-  padding: 0 5px;
-  text-align: center;
+  /*padding: 0 5px;*/
+  /*text-align: center;*/
   position: absolute;
-  margin-left: 125px;
-  margin-top: -3px;
+  margin-left: 140px;
 }
 
 header {

@@ -11,7 +11,7 @@
 <div class="container">
 
   <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", :class=> 'helvetica' %>
   <% end %>
 
 <nav>
@@ -20,8 +20,8 @@
 
   <span class="right">
 <% if current_user %>
-  <b><p class="username">
-  logged in:&nbsp;<%= current_user_name.downcase %>
+  <b><p class="username helvetica">
+  user:&nbsp;<%= current_user_name.downcase %>
 </p></b>
 <% end %>
 
