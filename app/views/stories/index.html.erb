@@ -1,12 +1,12 @@
 <header>
   <h1>The World's Story</h1>
 </header>
-<h3 id="subtitle">by: 
+<h6 class="subtitle helvetica">AUTHORS: 
   <span id="author_list">
-    <%= @author_list.to_sentence %>
+    <%= @author_list.to_sentence.upcase %>
   </span>
-</h3>
+</h6>
 
 <p><%= @story.map{|line| line.text}.join(" ").gsub("*", "</p><p>").html_safe %></p>
 
-<%= link_to "next sentence", "/next" %>
+<%= link_to "write the next sentence", "/next" %>
