@@ -14,6 +14,7 @@ nav a {
   width: 50px;
   margin: 0 auto 7px auto;
 }
+
 h1, h2 {
   font-family: 'helvetica';
 }
@@ -29,6 +30,7 @@ h1, h2 {
 #go_button {
   display:none;
 }
+
 a  {
   font-family: 'helvetica';
   border:none;
@@ -38,6 +40,10 @@ a  {
   border-radius: 3px;
   padding: 3px 8px 2px 8px;
   text-align: center;
+}
+
+#add_one {
+  color:#ee3b05;
 }
 
 #twitter {
@@ -76,7 +82,7 @@ a  {
   /*padding: 0 5px;*/
   /*text-align: center;*/
   position: absolute;
-  margin-left: 140px;
+  margin-left: 153px;
 }
 
 header {
@@ -114,10 +120,13 @@ header {
   padding-right: 20px;
 }
 
-.vote_up {
+.vote_control .vote_up, .vote_down {
   height:37px;
 }
-.vote_down {
+input[type=submit] {
+  cursor: pointer;
+}
+{
   height:37px;
 }
 .vote_count {

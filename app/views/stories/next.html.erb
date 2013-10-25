@@ -2,16 +2,16 @@
 <h1> The Next Sentence </h1>
 </header>
 
-
   <% if @nextline_options.empty? %>
     <div class="no_lines">
-    no sentences yet - be the first!
+      No sentences have been submitted yet. It's up to you!
   </div>
   <% end %>
   
   <% @nextline_options.each do |sen| %>
 
     <div class="possible_line">
+
     <div class="vote_control">
       <div class="vote_up">
         <%= form_tag "sentences/#{sen.id}/votes" do %>
@@ -42,4 +42,4 @@
   </div>
 <% end %>
 
-<%= link_to "add your own option", "/lines/#{@story_id}/sentences/new"  %>
+<%= link_to "add your own option", "/lines/#{@story_id}/sentences/new", :id=>"add_one"  %>

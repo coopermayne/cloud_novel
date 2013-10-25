@@ -1,5 +1,9 @@
 TestyApp::Application.routes.draw do
 
+  get "welcome/index"
+
+  get '/about' => 'welcome#index'
+
   match '/auth/:provider/callback' => 'authentications#create'
   get '/authentications' => 'authentications#index'
   get "/authentications/:id/delete" => 'authentications#destroy'
