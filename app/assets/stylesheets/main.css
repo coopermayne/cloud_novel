@@ -69,9 +69,6 @@ a {
   border-right: 3px dotted black;
 }
 
-#log {
-}
-
 #flash_notice {
   color: red;
   font-weight: bold;
@@ -130,9 +127,7 @@ header {
 input[type=submit] {
   cursor: pointer;
 }
-{
-  height:37px;
-}
+
 .vote_count {
   height:20px;
   font-weight: bold;
